@@ -1,0 +1,58 @@
+.animation, .animation_layer {
+	height: 1000px;
+}
+
+.animation {
+  display: block;
+	position: relative;
+	z-index: 10;
+}
+
+.animation_layer {
+	background-position: bottom center;
+	background-size: auto 1038px;
+	background-repeat: repeat-x;
+	width: 100%;
+	position: absolute;
+}
+.animation_layer.parallax {
+	position: fixed;
+}
+
+#moon {
+    background-image: url(./images/moon.png);
+    z-index: 1;
+    /* border: 1px solid white; */
+}
+
+#stars {
+    background-image: url(./images/stars.png);
+    z-index: 2;
+    /* border: 1px solid white; */
+}
+
+#mountains_behind {
+    background-image: url(./images/mountains_behind.png);
+    z-index: 3;
+    /* border: 1px solid white; */
+}
+
+#mountains_front {
+    background-image: url(./images/mountains_front.png);
+    z-index: 4;
+    font-size: 50px;
+    color: white;
+    padding-left: 20px;
+    padding-top: 880px;
+    /* border: 1px solid white; */
+}
+
+#filler {
+    background: #1c0522;
+    /* border: 1px solid white; */
+}
+
+#footer {
+    background: #1c0522;
+    border: 1px solid white;
+}

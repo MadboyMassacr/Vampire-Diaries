@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    /* background: linear-gradient(#170534, #7597de); */
+    overflow-x: hidden;
+    overflow: hidden;
+    background: linear-gradient(#150329, #8530ad);
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .logo {
+    color: #fff;
+    font-family: "IM Fell English SC", serif;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-right: 50px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+
+header ul li a:hover, 
+header ul li a.active {
+    color: #f00;
+    background: white;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+}
+
+section::before {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1c0522, transparent);
+    z-index: 1000;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 1;
+}
+
+.sec {
+    position: relative;
+    /* padding: 100px; */
+    /* background: #1c0522; */
+    height: 100vh;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: -450px;
+    /* border: 1px solid white; */
+}
+
+.sec-container {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 70px;
+    z-index: 1000;
+}
+
+.sec h2 {
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.sec p {
+    color: #fff;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    /* border: 1px solid white; */
+}
+
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #5b046f;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  align-content: center;
+  height: 100px;
+  width: 300px;
+  font-size: 26px;
+  font-family: "IM Fell English SC", serif;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #200346;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+#footer {
+    border: 1px solid white;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  
+  .section.animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
